@@ -1,0 +1,27 @@
+{
+  "name": "claude-dating-assistant",
+  "version": "1.0.0",
+  "description": "A custom dating conversation assistant powered by Anthropic's Claude Sonnet 3.5",
+  "main": "index.html",
+  "scripts": {
+    "dev": "netlify dev"
+  },
+  "keywords": [
+    "claude",
+    "anthropic",
+    "ai",
+    "chatbot",
+    "dating",
+    "assistant",
+    "netlify",
+    "serverless"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^1.6.2"
+  },
+  "devDependencies": {
+    "netlify-cli": "^17.10.1"
+  }
+}

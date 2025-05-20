@@ -1,0 +1,21 @@
+[build]
+  publish = "/"
+  functions = ".netlify/functions" # Explicitly set the functions directory
+  
+[dev]
+  framework = "#static"
+
+# Removed the broad redirect rule that was causing issues with static assets
+# [[redirects]]
+#  from = "/*"
+#  to = "/index.html"
+#  status = 200
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-XSS-Protection = "1; mode=block"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "no-referrer-when-downgrade"
+    Content-Security-Policy = "default-src 'self'; connect-src 'self' https://*.netlify.app; script-src 'self'; style-src 'self' https://cdnjs.cloudflare.com 'unsafe-inline'; font-src 'self' https://cdnjs.cloudflare.com; img-src 'self' data:;"
